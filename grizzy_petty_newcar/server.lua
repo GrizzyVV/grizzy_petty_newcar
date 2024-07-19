@@ -11,7 +11,7 @@ RegisterNetEvent('InsertCarToDb', function(xPlayer, vehData, auth)
         xPlayer = ESX.GetPlayerFromId(src)
     end
     if auth == nil then 
-        autn = 'nil'
+        auth = 'nil'
     end
     if auth ~= 'true' then 
         -- go to your es_extended/config_logs.lua and enter the name of this resource ['grizzy_petty_newcar'] as the key for a log and add the webhook of your choice
