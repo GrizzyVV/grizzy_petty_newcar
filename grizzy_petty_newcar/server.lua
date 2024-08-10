@@ -1,15 +1,8 @@
-RegisterNetEvent('esx:playerLoaded', function(player, xPlayer, isNew)
-    while xPlayer == nil do Wait(10) end 
-    if isNew == true then 
-        TriggerClientEvent('CreateCarData', xPlayer.source, xPlayer)
-    end
-end)
-RegisterNetEvent('InsertCarToDb', function(xPlayer, vehData, auth)
-    local xPlayer
-    if xPlayer == nil then 
-        local src = source
-        xPlayer = ESX.GetPlayerFromId(src)
-    end
+
+RegisterNetEvent('InsertCarToDb', function(vehData, auth)
+    print('server receiving from clinet:', vehData.plate, auth)
+    local src = source
+    xPlayer = ESX.GetPlayerFromId(src)
     if auth == nil then 
         auth = 'nil'
     end
